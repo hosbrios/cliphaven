@@ -10,14 +10,14 @@
 
 # Profile section
 
-## Log-in
+### Log-in
 
-## Own clips / upload
+### Own clips / upload
 
 # Explore
 
-## Game Categories
+### Game Categories
 
 # Search
 
-## Searching for specific clips
+### Searching for specific clips
