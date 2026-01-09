@@ -1,0 +1,71 @@
+body{
+    background-image: radial-gradient(#101010,#212133);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    color: rgb(221, 221, 221);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sidebar {
+    width: 200px;
+    height: 100%;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: -150px;
+    transition: left 0.3s ease-in-out;
+    padding-top: 20px;
+}
+
+.sidebar:hover {
+    left: 0;
+}
+
+.sidebar .section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.sidebar .section a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+}
+
+.sidebar .section a:hover {
+    transform: scale(1.2);
+    font-size: 20px;
+}
+
+.sidebar:hover + .content {
+    margin-left: 200px; /* A fő tartalom elmozdul, amikor a sidebar ki van nyitva */
+}
+
+/* Reszponzív dizájn */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 50px;
+    }
+
+    .sidebar .section a {
+        font-size: 14px;
+    }
+
+    .sidebar:hover {
+        left: -50px;
+    }
+
+    .sidebar:hover + .content {
+        margin-left: 50px;
+    }
+}
